@@ -1,0 +1,207 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'monospace';
+}
+body{
+  height: 100vh;
+  background-color: rgb(240, 240, 240);
+  touch-action: manipulation;
+  background-color: rgb(100, 100, 200);
+}
+.maincont{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+canvas{
+  border: 5px solid rgb(0, 0, 128);
+  border-radius: 5px;
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 90vw;
+  height: 50vh;
+  background-image: url('stars.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home{
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: white;
+  margin: auto;
+  width: 90%;
+}
+.home button{
+  display: block;
+  margin: auto;
+  width: 100%;
+  font-size: 30px;
+  padding: 10px;
+  color: white;
+  background: linear-gradient(127deg, red, blue);
+  border-radius: 10px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.home div{
+  text-align: center;
+  color: navy;
+  margin: 20px;
+  font-size: 20px;
+  padding: 5px;
+}
+.home div b{
+  background: linear-gradient(to bottom, red, blue);
+  background-clip: text;
+  color: transparent;
+  font-size: 25px;
+}
+.home div p{
+  font-style: italic;
+  padding: 5px;
+  border-radius: 10px;
+  color: blue;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+.spacing{
+  position: relative;
+  display: none;
+  width: 100%;
+  height: 40%;
+}
+.progress-bar{
+  margin: auto;
+  width: 90%;
+  display: none;
+  height: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+.progress-bar .label{
+  height: 100%;
+  width: 20px;
+}
+.bar{
+  border-radius: 5px;
+  position: relative;
+  background-image: linear-gradient(to right, rgb(100, 0, 200), rgb(255, 0, 100), rgb(255, 0, 0));
+  border: none;
+  width: 100%;
+  height: 50%;
+}
+.bar .meter{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+}
+.bar img{
+  position: absolute;
+  height: 90%;
+  right: 5px;
+}
+#touchpad{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 2px solid rgb(100, 100, 200);
+  width: 100%;
+  height: 100%;
+}
+#topright{
+  background: linear-gradient(70deg, rgb(240, 240, 255), rgb(240, 240, 255), rgb(100, 100, 200), rgb(240, 240, 255), rgb(100, 100, 200));
+}
+#topleft{
+  background: linear-gradient(-70deg, rgb(240, 240, 255), rgb(240, 240, 255), rgb(100, 100, 200), rgb(240, 240, 255), rgb(100, 100, 200));
+}
+#bottomright{
+  background: linear-gradient(-70deg, rgb(100, 100, 200), rgb(240, 240, 255), rgb(100, 100, 200), rgb(240, 240, 255), rgb(240, 240, 255));
+}
+#bottomleft{
+  background: linear-gradient(70deg, rgb(100, 100, 200), rgb(240, 240, 255), rgb(100, 100, 200), rgb(240, 240, 255), rgb(240, 240, 255));
+}
+.leftdot, .rightdot{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(255, 255, 0);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  top: 50%;
+  box-shadow: 0 0 15px yellow;
+}
+.leftdot{
+  left: 10%;
+}
+.rightdot{
+  right: 10%;
+}
+.keyboard{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 3px;
+  background-color: rgb(200, 200, 255);
+  border-radius: 20px;
+  padding: 10px;
+  width: 45%;
+  height: 95%;
+  box-shadow: 0 5px 5px;
+}
+.keyboard button{
+  color: white;
+  border-radius: 20%;
+  background-color: rgb(50, 50, 255);
+  border-top: 1px solid white;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid white;
+  font-size: 30px;
+}
+.keyboard p{
+  text-align: center;
+  font-size: 30px;
+  color: navy;
+  grid-column-end: span 3;
+  background-color: white;
+}
+.keyboard .special{
+  background-color: rgba(255, 50, 50, 0.7);
+}
+#endMsg{
+  display: none;
+  text-align: center;
+  margin-top: 30px;
+  color: blue;
+  font-size: 15px;
+}
+#endMsg button{
+  display: block;
+  margin: 10px auto;
+  width: 90%;
+  font-size: 30px;
+  padding: 10px;
+  color: white;
+  background: linear-gradient(127deg, red, blue);
+  border-radius: 10px;
+  border-right: 1px solid blue;
+  border-bottom: ;: 1px solid blue;
+  border-top: 1px solid green;
+  border-left: 1px solid green;
+}
+#endMsg header{
+  font-size: 25px;
+}
