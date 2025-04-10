@@ -1,7 +1,7 @@
 const canvas = document.getElementById("mycanvas");
 const ctx = canvas.getContext('2d');
 var score = 0;
-var bulletnum = 100;
+var bulletnum = 10;
 // rocket
 const rocket = {
   x: canvas.width / 3,
