@@ -1,7 +1,7 @@
 const canvas = document.getElementById("mycanvas");
 const ctx = canvas.getContext('2d');
 var score = 0;
-var bulletnum = 10;
+var bulletnum = 100;
 // rocket
 const rocket = {
   x: canvas.width / 3,
@@ -85,6 +85,9 @@ rocketEffect.image.src = 'rocketeffect.png'
 
 var rockArray = [rock, rock2, rock3, rock4];
 // main game
+window.addEventListener('load', function(){
+  document.getElementById('loadingpage').style.display = "none";
+})
 rocket.image.onload = () => {
   rocket.y = rocket.y + rocket.height/3
   ctx.drawImage(rocket.image, rocket.x, rocket.y + 20, rocket.width, rocket.height);
@@ -187,7 +190,7 @@ function update(){
   if (level > 100){
     orderOfQuestion.pop()
     if (orderOfQuestion.length == 0){
-      document.querySelector("#endMsg").style.color = "green"
+      document.querySelector("#endMsg").style.color = "lightgreen"
       document.getElementById("gamebonus").play()
       gameoverfunc("Congratulations!!")
     cancelAnimationFrame(id);
