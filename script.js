@@ -1,7 +1,7 @@
 const canvas = document.getElementById("mycanvas");
 const ctx = canvas.getContext('2d');
 var score = 0;
-var bulletnum = 10;
+var bulletnum = 100;
 // rocket
 const rocket = {
   x: canvas.width / 3,
@@ -73,15 +73,15 @@ const rocketEffect = {
 }
 var scoreimg = new Image();
 var shield = new Image();
-shield.src = 'shield.png'
-scoreimg.src = 'scoreimg.png'
-rock.image.src = 'rock.png'
-rock2.image.src = 'rock.png'
-rock3.image.src = 'rock.png'
-rock4.image.src = 'rock.png'
-rocket.image.src = 'rocket.png'
-effect.image.src = 'effect.png'
-rocketEffect.image.src = 'rocketeffect.png'
+shield.src = 'shield.webp'
+scoreimg.src = 'scoreimg.webp'
+rock.image.src = 'rock.webp'
+rock2.image.src = 'rock.webp'
+rock3.image.src = 'rock.webp'
+rock4.image.src = 'rock.webp'
+rocket.image.src = 'rocket.webp'
+effect.image.src = 'effect.webp'
+rocketEffect.image.src = 'rocketeffect.webp'
 
 var rockArray = [rock, rock2, rock3, rock4];
 // main game
