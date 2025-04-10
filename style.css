@@ -56,7 +56,7 @@ canvas{
   margin: auto;
   width: 90vw;
   height: 50vh;
-  background-image: url('stars.jpg');
+  background-image: url('stars.webp');
   background-repeat: no-repeat;
   background-size: cover;
 }
